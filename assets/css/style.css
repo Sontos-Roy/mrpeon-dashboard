@@ -1,0 +1,280 @@
+@import url(fonts.css);
+*{
+    margin: 0;
+    padding: 0;
+    font-family: open sans, sans-serif;
+}
+
+:root{
+    /* color */
+    --primary: #222d32;
+    --secondary: #FDD10A;
+    --third: #337ab7;
+
+    /* font family  */
+    --bold: bold;
+    --regular: regular;
+    --medium: medium;
+    --semibold: semibold;
+    --light: light;
+
+}
+
+.primary{
+    color: var(--primary);
+}
+.primary-bg{
+    background-color: var(--primary);
+}
+.secondary{
+    color: var(--secondary);
+}
+.secondary-bg{
+    background-color: var(--secondary);
+}
+.third{
+    color: var(--third) !important;
+}
+.third-bg{
+    background: var(--third) !important;
+}
+.font-bold{
+    font-family: var(--bold), sans-serif;
+}
+.font-regular{
+    font-family: var(--regular), sans-serif;
+}
+.font-medium{
+    font-family: var(--medium), sans-serif;
+}
+.font-semibold{
+    font-family: var(--semibold), sans-serif;
+}
+.font-light{
+    font-family: var(--light), sans-serif;
+}
+.lh-1{
+    line-height: 1.5;
+}
+.lh-2{
+    line-height: 1.8;
+}
+.lh-3{
+    line-height: 2;
+}
+.ls-0{
+    letter-spacing: 5px;
+}
+.ls-1{
+    letter-spacing: 8px;
+}
+.ls-2{
+    letter-spacing: 10px;
+}
+.ls-3{
+    letter-spacing: 12px;
+}
+.ls-4{
+    letter-spacing: 15px;
+}
+.text-cap{
+    text-transform: uppercase;
+}
+.d-flex{
+    flex-wrap: wrap;
+}
+.overflow{
+    overflow: hidden;
+}
+.main-wrapper{
+    width: 100%;
+    overflow-x: hidden;
+}
+header{
+    height: 80px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1080;
+}
+.profile-toggler{
+    position: relative;
+    color: white;
+}
+.profile-toggler::after{
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f0d7";
+    margin-top: 5px;
+}
+.profile-dp{
+    position: absolute;
+    right: 0;
+    box-shadow: 1px 1px 0px 3px rgba(202, 202, 202, 0.445);
+    width: 150px;
+    background: white;
+    margin-top: 10px;
+    display: none;
+}
+.sidebar-wrapper{
+    width: 100%;
+    display: flex;
+    padding-top: 70px;
+    overflow-x: hidden;
+}
+.sidebar{
+    min-width: 60px;
+    background-color: var(--primary);
+    min-height: 100vh;
+    height: auto;
+    transition: 0.3s;
+}
+.sidebar.active{
+    width: 60px !important;
+    transition: 0.3s;
+}
+
+.sidebar .profile-info-lg .extends-sm{
+    display: none;
+}
+.page-body{
+    flex-grow: 1;
+}
+
+.sidebar ul{
+    padding: 0;
+}
+.sidebar ul *{
+    color: rgb(196, 195, 195);
+    list-style: none;
+}
+.sidebar ul li:hover{
+    background:rgb(48, 48, 48);
+}
+.sidebar ul li a{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+.sidebar ul li a i{
+    padding: 10px;  
+    font-size: 20px;
+}
+.sidebar ul li.has-dropdown ul{
+    padding: 5px;
+    padding-left: 2.5rem;
+    display: none;
+}
+
+.sidebar ul li.has-dropdown > a{
+    position: relative;
+    transition: 0.3s;
+}
+.sidebar ul li.has-dropdown > a::after{
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f0d7";
+    position: absolute; 
+    top: 0;
+    right: 0;
+    margin-right: 5px;
+    margin-top: 5px;
+    transform: rotate(-90deg);
+    transition: 0.3s;
+}
+.sidebar ul li.has-dropdown > a.active::after{
+    transform: rotate(0deg);
+    transition: 0.3s;
+}
+.sidebar.active ul li.has-dropdown> a::after{
+    content: "";
+}
+.sidebar ul li.has-dropdown.active ul{
+    display: block;
+}
+.sidebar ul li.has-dropdown.active ul li:hover{
+    background: #070707;
+}
+.sidebar ul li.has-dropdown.active ul li.active{
+    background: #070707;
+}
+.card {
+    border-radius: 5px;
+    -webkit-box-shadow: 0 1px 20px 0 rgb(69 90 100 / 8%);
+    box-shadow: 0 1px 20px 0 rgb(69 90 100 / 8%);
+    border: none;
+    margin-bottom: 30px;
+}
+
+.update-card {
+    color: #fff;
+}
+.bg-c-yellow {
+    background: -webkit-gradient(linear, left top, right top, from(#fe9365), to(#feb798));
+    background: linear-gradient(to right, #fe9365, #feb798);
+}
+.bg-c-green {
+    background: -webkit-gradient(linear, left top, right top, from(#0ac282), to(#0df3a3));
+    background: linear-gradient(to right, #0ac282, #0df3a3);
+}
+
+.bg-c-pink {
+    background: -webkit-gradient(linear, left top, right top, from(#fe5d70), to(#fe909d));
+    background: linear-gradient(to right, #fe5d70, #fe909d);
+}
+.bg-c-lite-green {
+    background: -webkit-gradient(linear, left top, right top, from(#01a9ac), to(#01dbdf));
+    background: linear-gradient(to right, #01a9ac, #01dbdf);
+}
+.card-block {
+    padding: 1.25rem;
+}
+.update-card .card-footer {
+    background-color: transparent;
+    border-top: 1px solid #fff;
+}
+.card {
+    border-radius: 5px;
+    -webkit-box-shadow: 0 1px 20px 0 rgb(69 90 100 / 8%);
+    box-shadow: 0 1px 20px 0 rgb(69 90 100 / 8%);
+    border: none;
+    margin-bottom: 30px;
+}
+.card .card-header {
+    background-color: transparent;
+    border-bottom: none;
+    padding: 25px 20px;
+}
+.card .card-header h5 {
+    margin-bottom: 0;
+    color: #505458;
+    font-size: 14px;
+    font-weight: 600;
+    display: inline-block;
+    margin-right: 10px;
+    line-height: 1.4;
+}
+.card .card-header span {
+    color: #919aa3;
+    display: block;
+    font-size: 13px;
+    margin-top: 5px;
+}
+.table tr th{
+    margin-bottom: 0;
+    color: #505458;
+    font-size: 14px;
+    font-weight: 600;
+    margin-right: 10px;
+}
+.table tr td{
+    margin-bottom: 0;
+    color: #505458;
+    font-size: 14px;
+    font-weight: 500;
+    margin-right: 10px;
+}

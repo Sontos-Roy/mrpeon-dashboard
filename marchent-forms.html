@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/datatables.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/media.css">
+</head>
+<body>
+    <div class="main-wrapper">
+        <header>
+            <nav class="navbar navbar-expand-sm secondary-bg">
+                <div class="col-11 m-auto row align-items-center justify-content-between">
+                  <div class="col-lg-3 col-12 d-flex">
+                      <div class="col-lg-5 col-12 m-auto text-lg-start text-center">
+                          <a class="navbar-brand" href="/"><img src="assets/images/mrpeon.png" alt="" height="40">
+                          </a>
+                      </div>
+                      <button class="btn d-md-block d-lg-block d-none" id="sidebar-toggler"><i class="fas fa-bars"></i></button>
+                  </div>
+                  <button class="me-auto btn d-block d-md-none d-lg-none" style="width: 60px;" id="sidebar-toggler2"><i class="fas fa-bars"></i></button>
+                  <div class="dropdown col-6 col-lg-2">
+                          <a class="nav-link profile-toggler" href="#">MR. PEON</a>
+                          <div class="profile-dp">
+                              <a class="dropdown-item" href="/profile.html">Profile</a>
+                              <a class="dropdown-item" href="#">Logout</a>
+                          </div>
+                  </div>
+            </div>
+          </nav>
+            
+        </header>
+        <div class="sidebar-wrapper row pt-5">
+            <nav class="sidebar bg-dark col-lg-3 col-md-3">
+                <div class="text-center pt-4 profile-info-lg">
+                    <h5 class="text-light extends-lg">MR. PEON</h5>
+                    <h5 class="text-light extends-sm">MR</h5>
+                    <p class="status text-success"><i class="fas fa-circle"></i> <span>online</span></p>
+                </div>
+
+                <hr class="border border-light">
+                <ul>
+                    
+                    <div class="nav-item bg-black p-2 text-muted">Navigation</div>
+                    <li><a href="#" class="link"><i class="fas fa-tachometer-alt"></i> <span>Dashboard</span></a></li>
+                    <li><a href="#" class="link"><i class="fas fa-tachometer-alt"></i> <span>Dashboard</span></a></li>
+                    <div class="nav-item bg-black p-2 text-muted">Navigation</div>
+                    <li class="has-dropdown">
+                        <a href="#" class="link"><i class="fas fa-user"></i> <span>Users</span></a>
+                        <ul class="dropdown-content">
+                            <li class="active"><a href="#"><i class="fas fa-user-plus"></i> Add User</a></li>
+                            <li><a href="#"><i class="fas fa-users-cog"></i> All Users</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="#" class="link"><i class="fas fa-user"></i> <span>Merchants</span></a>
+                        <ul class="dropdown-content">
+                            <li class=""><a href="/marchent-forms.html"><i class="fas fa-user-plus"></i> merchant forms</a></li>
+                            <li><a href="/marchent-list.html"><i class="fas fa-users-cog"></i> merchant list</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <div class="page-body col-lg-9 col-md-9 col-11 pt-4">
+                <div class="col-lg-12 m-auto col-12">
+                    
+                    <div class="col-12 mb-3">
+                        <div class="card border border-info overflow">
+                            <div class="card-header pt-0 px-3 third-bg row p-2 align-items-center">
+                                    <div class="col-6 col-lg-4">
+                                        <h5 class="text-light m-0 text-cap">45 Collections</h5>
+                                    </div>
+                                    <div class="col-6 col-lg-4">
+                                        <p class="text-light text-center m-0">All Delivery</p>
+                                    </div>
+                            </div>
+                                                        
+                            <div class="card-body table-responsive">
+                                <div class="button-list d-flex justify-content-center mt-2 mb-3">
+                                    <a href="#" class="btn btn-info btn-sm text-light m-1">Delivery Status</a>
+                                    <a href="#" class="btn btn-light btn-sm border m-1">Delivery Status</a>
+                                    <a href="#" class="btn btn-primary btn-sm m-1">Delivery Status</a>
+                                    <a href="#" class="btn btn-success btn-sm m-1">Delivery Status</a>
+                                    <a href="#" class="btn btn-warning btn-sm m-1">Delivery Status</a>
+                                    <a href="#" class="btn btn-secondary btn-sm m-1">Delivery Status</a>
+                                </div>
+                                <form action="">
+                                    <div class="row mt-5">
+                                        <div class="col-lg-6 col-12">
+                                            <div class="col-12 row mb-3">
+                                                <div class="col-lg-5 col-12 text-start text-lg-end">
+                                                    <small class="font-bold text-muted">
+                                                        Reciepent Name*
+                                                    </small>
+                                                </div>
+                                                <div class="col-lg-7 col-12">
+                                                    <input type="text" class="form-control shadow-none rounded-0" placeholder="Reciepent Name">
+                                                </div>
+                                            </div>
+                                            <div class="col-12 row mb-3">
+                                                <div class="col-lg-5 col-12 text-start text-lg-end">
+                                                    <small class="font-bold text-muted">
+                                                        Reciepent Number*
+                                                    </small>
+                                                </div>
+                                                <div class="col-lg-7 col-12">
+                                                    <input type="text" class="form-control shadow-none rounded-0" placeholder="Reciepent Number">
+                                                </div>
+                                            </div>
+                                            <div class="col-12 row mb-3">
+                                                <div class="col-lg-5 col-12 text-start text-lg-end">
+                                                    <small class="font-bold text-muted">
+                                                        Reciepent Address*
+                                                    </small>
+                                                </div>
+                                                <div class="col-lg-7 col-12">
+                                                    <textarea name="" id="" rows="2" class="form-control shadow-none rounded-0" placeholder="Reciepent Address"></textarea>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 row mb-3">
+                                                <div class="col-lg-5 col-12 text-start text-lg-end">
+                                                    <small class="font-bold text-muted">
+                                                        Reciepent Zone*
+                                                    </small>
+                                                </div>
+                                                <div class="col-lg-7 col-12">
+                                                        <select class="form-select shadow-none" name="" id="">
+                                                            <option selected>Select one</option>
+                                                            <option value="">New Delhi</option>
+                                                            <option value="">Istanbul</option>
+                                                            <option value="">Jakarta</option>
+                                                        </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-12">
+                                            <div class="col-12 row mb-3">
+                                                <div class="col-lg-5 col-12 text-start text-lg-end">
+                                                    <small class="font-bold text-muted">
+                                                        Reciepent Email 
+                                                    </small>
+                                                </div>
+                                                <div class="col-lg-7 col-12">
+                                                    <input type="text" class="form-control shadow-none rounded-0" placeholder="Reciepent Email">
+                                                </div>
+                                            </div>
+                                            <div class="col-12 row mb-3">
+                                                <div class="col-lg-5 col-12 text-start text-lg-end">
+                                                    <small class="font-bold text-muted">
+                                                        Ammount Collected
+                                                    </small>
+                                                </div>
+                                                <div class="col-lg-7 col-12">
+                                                    <input type="text" class="form-control shadow-none rounded-0" placeholder="Ammount Collected">
+                                                </div>
+                                            </div>
+                                            <div class="col-12 row mb-3">
+                                                <div class="col-lg-5 col-12 text-start text-lg-end">
+                                                    <small class="font-bold text-muted">
+                                                        Instruction/Description
+                                                    </small>
+                                                </div>
+                                                <div class="col-lg-7 col-12">
+                                                    <textarea name="" id="" rows="2" class="form-control shadow-none rounded-0" placeholder="Instruction/Description"></textarea>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 row mb-3">
+                                                <div class="col-lg-5 col-12 text-start text-lg-end">
+                                                    <small class="font-bold text-muted">
+                                                        Merchant Order Id
+                                                    </small>
+                                                </div>
+                                                <div class="col-lg-7 col-12">
+                                                    <input type="text" class="form-control shadow-none rounded-0" placeholder="Merchant Order Id">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 d-flex justify-content-between">
+                                            <button class="btn btn-warning font-bold">Save</button>
+                                            <button class="btn btn-warning font-bold">Save And Print</button>
+                                        </div>
+                                    </div>
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 mb-3">
+                        <div class="card border border-info overflow">
+                            <div class="card-header pt-0 px-3 third-bg row p-2 align-items-center">
+                                        <p class="text-light text-center m-0">All Delivery</p>
+                            </div>
+                            <style>
+                                .form-label{
+                                    font-size: 13px;
+                                    font-weight: 600;
+                                }
+                            </style>
+                            <div class="card-body table-responsive">
+                                <form action="">
+                                    <div class="row mt-5 container">
+                                        <h5 class="font-bold text-secondary">BUSINESS DETAILS</h5>
+                                        <br><br>
+                                        <div class="col-lg-6 col-12">
+                                            <div class="col-12 mb-3">
+                                                <label for="" class="text-muted form-label">
+                                                    What's The Name Of Your Business? *
+                                                </label>
+                                                <input type="text" class="form-control shadow-none rounded-0" placeholder="Business Name *">
+                                            </div>
+                                            <div class="col-12 mb-3">
+                                                <label for="" class="text-muted form-label">
+                                                    Address Of Your Main Office?*
+                                                </label>
+                                                <input type="text" class="form-control shadow-none rounded-0" placeholder="Address Of Your Main Office?*">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-12">
+                                            <div class="col-12 mb-3">
+                                                <label for="" class="text-muted form-label">
+                                                    What's The Name Of Your Business? *
+                                                </label>
+                                                <input type="text" class="form-control shadow-none rounded-0" placeholder="Business Name *">
+                                            </div>
+                                            <div class="col-12 mb-3">
+                                                <label for="" class="text-muted form-label">
+                                                    Address Of Your Main Office?*
+                                                </label>
+                                                <input type="text" class="form-control shadow-none rounded-0" placeholder="Address Of Your Main Office?*">
+                                            </div>
+                                            
+                                            
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="row mt-5 container">
+                                        <h5 class="font-bold text-secondary">CONTACT DETAILS</h5>
+                                        <br><br>
+                                        <div class="col-lg-6 col-12">
+                                            <div class="col-12 mb-3">
+                                                <label for="" class="text-muted form-label">
+                                                    Business Owner Name *
+                                                </label>
+                                                <input type="text" class="form-control shadow-none rounded-0" placeholder="Business Owner Name *">
+                                            </div>
+                                            <div class="col-12 mb-3">
+                                                <label for="" class="text-muted form-label">
+                                                    Business Owner Email *
+                                                </label>
+                                                <input type="text" class="form-control shadow-none rounded-0" placeholder="Business Owner Email *">
+                                            </div>
+                                            <div class="col-12 mb-3">
+                                                <label for="" class="text-muted form-label">
+                                                    Hub *
+                                                </label>
+                                                <select class="form-select shadow-none rounded-0" name="" id="">
+                                                    <option selected>Select Bub</option>
+                                                    <option value="">New Delhi</option>
+                                                    <option value="">Istanbul</option>
+                                                    <option value="">Jakarta</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-12">
+                                            <div class="col-12 mb-3">
+                                                <label for="" class="text-muted form-label">
+                                                    Business Owner Phone Number *
+                                                </label>
+                                                <input type="text" class="form-control shadow-none rounded-0" placeholder="Business Name *">
+                                            </div>
+                                            <div class="col-12 mb-3">
+                                                <label for="" class="text-muted form-label">
+                                                    Password *
+                                                </label>
+                                                <input type="text" class="form-control shadow-none rounded-0" placeholder="Address Of Your Main Office?*">
+                                            </div>
+                                            <div class="col-12 mb-3">
+                                                <label for="" class="text-muted form-label">
+                                                    COD
+                                                </label>
+                                                <select class="form-select shadow-none rounded-0" name="" id="">
+                                                    <option selected>1%</option>
+                                                    <option value="">2%</option>
+                                                    <option value="">3%</option>
+                                                    <option value="">4%</option>
+                                                </select>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="row mt-5 container">
+                                        <h5 class="font-bold text-secondary">PAYMENT INFORMATION OPTIONAL</h5>
+                                        <br><br>
+                                        <div class="d-flex mb-3 radio-check-input">
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" name="payment" id="" data-form="" value="{3:option1}">
+                                                <label class="form-check-label" for="">Cash</label>
+                                              </div>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" name="payment" id="" data-form="mobile-bank" value="{3:option1}">
+                                                <label class="form-check-label" for="">Mobile Bank</label>
+                                              </div>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" name="payment" id="" data-form="bank" value="{3:option1}">
+                                                <label class="form-check-label" for="">Bank</label>
+                                              </div>
+                                        </div>
+                                        <div class="tab-section">
+                                            <div class="tab-inner" id="mobile-bank" style="display: none;">
+                                                <div class="row">
+                                                    <div class="col-lg-4 col-md-4 col-12 mb-3">
+                                                        <div class="mb-3">
+                                                            <label for="" class="form-label text-muted">Mobile Wallet Type *</label>
+                                                            <select class="form-select shadow-none rounded-0" name="" id="">
+                                                                <option selected>Select one</option>
+                                                                <option value="">Bkash</option>
+                                                                <option value="">Nagad</option>
+                                                                <option value="">Upay</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-4 col-12 mb-3">
+                                                        <div class="mb-3">
+                                                            <label for="" class="form-label text-muted">Mobile Wallet Type *</label>
+                                                            <input type="text" class="form-control rounded-0 shadow-none" placeholder="Mobile Wallet Type *">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-4 col-12 mb-3">
+                                                        <div class="mb-3">
+                                                            <label for="" class="form-label text-muted">Payment Instructions *</label>
+                                                            <input type="text" class="form-control rounded-0 shadow-none" placeholder="Payment Instructions *">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-inner" id="bank" style="display: none;">
+                                                <div class="row">
+                                                    <div class="col-lg-4 col-md-4 col-12 mb-3">
+                                                        <div class="mb-3">
+                                                            <label for="" class="form-label text-muted">Bank Name *</label>
+                                                            <input type="text" class="form-control rounded-0 shadow-none" placeholder="Bank Name *">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-4 col-12 mb-3">
+                                                        <div class="mb-3">
+                                                            <label for="" class="form-label text-muted">Bank Account Name *</label>
+                                                            <input type="text" class="form-control rounded-0 shadow-none" placeholder="Bank Account Name *">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-4 col-12 mb-3">
+                                                        <div class="mb-3">
+                                                            <label for="" class="form-label text-muted">Bank Account Number *</label>
+                                                            <input type="text" class="form-control rounded-0 shadow-none" placeholder="Bank Account Number *">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-4 col-12 mb-3">
+                                                        <div class="mb-3">
+                                                            <label for="" class="form-label text-muted">Routing Number *</label>
+                                                            <input type="text" class="form-control rounded-0 shadow-none" placeholder="Routing Number *">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-4 col-12 mb-3">
+                                                        <div class="mb-3">
+                                                            <label for="" class="form-label text-muted">Branch Name *</label>
+                                                            <input type="text" class="form-control rounded-0 shadow-none" placeholder="Branch Name *">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 d-flex justify-content-between">
+                                        <button class="btn btn-warning font-bold col-12">Submit</button>
+                                    </div>
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/datatables.min.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+</html>
